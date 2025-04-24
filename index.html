@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Дорогая</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="../images/flower.jpg">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<div class="lovetree">
+			<img src="lovetree.png" alt="">
+		</div>
+
+		<div class="lovetree2">
+			<div class="innerclick">
+				<img src="innerclick.png" alt="" id="tohide">
+
+				<div class="loveu">Я тебя очень люблю.<br>Твой Ролан</div>
+			</div>
+			<img src="heart.png" alt="">
+		</div>
+
+
+
+		<div class="text">
+			<div class="anim">
+				<img src="lepestki.gif" alt="">
+				<img src="lepestki.gif" alt="">
+				<img src="lepestki.gif" alt="">
+				<img src="lepestki.gif" alt="">
+				<img src="lepestki.gif" alt="">
+				<!-- ../images/lepestki.gif -->
+				<!-- ../images/kisses.gif -->
+			</div>
+			<h1>Дорогая Юля,</h1>
+
+			<p>
+				Сегодня твой день, и я от всей души поздравляю тебя с днем рождения! Пусть этот год станет для тебя особенным, наполненным яркими событиями, приятными сюрпризами и незабываемыми моментами.
+			</p>
+
+			<p>
+				Вспоминаю, сколько всего интересного произошло с нами за последнее время. Каждый миг, проведенный рядом с тобой, – это ценный подарок судьбы. Ты – удивительный человек, сочетающий в себе красоту, ум, доброту и невероятное чувство юмора.
+			</p>
+
+			<p>
+				Желаю тебе крепкого здоровья, неиссякаемой энергии и вдохновения для реализации всех твоих планов. Пусть удача сопутствует тебе во всех начинаниях, а рядом всегда будут верные друзья и любящие близкие.
+			</p>
+			
+			<p>
+				Ты умеешь заряжать позитивом и дарить радость окружающим. Твоя улыбка способна растопить лед в самом сердце, а твоя поддержка всегда приходит вовремя. Спасибо тебе за то, что ты есть!
+			</p>
+
+			<p>
+				Пусть этот день будет наполнен цветами, улыбками и теплыми поздравлениями. Желаю тебе безграничного счастья, любви и благополучия! С днем рождения, Юля!
+			</p>
+		</div>
+
+		<img src="https://i.pinimg.com/originals/27/5c/b3/275cb3045fe3bab00143db2659538ad1.png" class="mail">
+
+	</div>
+	
+</body>
+
+
+<script>
+
+	let lovetree = document.querySelector('.lovetree2');
+	let tohide = document.querySelector('#tohide');
+	let loveu = document.querySelector('.loveu');
+
+	lovetree.onclick = ()=>{
+
+			tohide.style.opacity = '0'
+		
+		setTimeout(()=>{
+			tohide.style.display = 'none';
+			loveu.style.display = 'block';
+		},1000)
+
+		setTimeout(()=>{
+			loveu.style.opacity = '1';
+		},1500)
+
+		lovetree.onclick = ()=>{
+				loveu.style.opacity = '0';
+				// document.querySelector('.innerclick').style.display = 'none'
+				document.querySelector('.innerclick').style.transition = '1s'
+				document.querySelector('.innerclick').style.opacity = '0'
+				// document.querySelector('.innerclick').style.width = '0%'
+				document.querySelector('.innerclick').style.width = '38%'
+		
+			setTimeout(()=>{
+				document.querySelector('.innerclick').style.opacity = '1'
+				document.querySelector('.innerclick').style.width = '38%'
+				tohide.src = 'julka.jpeg';
+				tohide.style.width = '100%'
+				tohide.style.borderRadius = '20%'
+
+				loveu.style.display = 'none';
+				tohide.style.display = 'block';
+				tohide.style.opacity = '1';
+				tohide.style.marginBottom = '-10px';
+				// tohide.style.transform = 'translate(90%)';
+			},1500)
+
+		}
+
+	}
+</script>
+
+</html>

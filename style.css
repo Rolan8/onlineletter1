@@ -1,0 +1,132 @@
+body{
+	margin: 0;
+}
+.wrapper{
+	background: url('flower.jpg') center center;
+	background-size: cover;
+	/*background-attachment: fixed;*/
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+
+h1{
+	text-align: center;
+	font-style: initial;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.text{
+	text-shadow: 0px 2px pink;
+	position: relative;
+	/*color: grey;*/
+	font-style: italic;
+	background-color: rgba(255, 255, 255, .5);
+	max-width: max(40%,600px);
+	font-size: 1.2rem;
+	min-height: 100vh;
+	padding: 10px;
+	padding-top: 1rem;
+	box-sizing: border-box;
+
+	font-family: "Caveat", cursive;
+	  font-optical-sizing: auto;
+	  font-style: normal;
+	  font-size: 1.7rem;
+}
+
+.mail{
+	display: none;
+}
+
+.anim{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	z-index: 500;
+}
+
+.anim img{
+	width: 100%;
+}
+
+p{	position: relative;
+	z-index: 1000;
+}
+
+.lovetree{
+	display: none;
+	position: absolute;
+	bottom: -40px;
+	/*left: 50%;*/
+/*	transform: translateX(50%);*/
+	right: 35%;
+}
+
+.lovetree img{
+	width: 385px;
+}
+
+.lovetree2{
+	position: absolute;
+	bottom: -3px;
+	/*left: 50%;*/
+	/*	transform: translateX(50%);*/
+	right: 35%;
+	cursor: pointer;
+}
+
+.lovetree2>img{
+	width: 385px;
+}
+
+.innerclick{
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 90%;
+}
+
+.innerclick img{
+	width: 50%;
+	transition: 1s;
+}
+
+.loveu{
+	display: none;
+	opacity: 0;
+	font-family: "Caveat", cursive;
+	  font-optical-sizing: auto;
+	  font-style: normal;
+	  font-size: 2.5rem;
+	  font-weight: bold;
+	  color: white;
+	transition: 1s;
+}
+
+@media(width<900px){
+	.text{
+		max-width: 100%;
+	}
+
+	.lovetree{
+		display: block;
+	transform: translateX(50%);
+	right: 50%;
+	}
+
+	.lovetree img{
+		width: 385px;
+	}
+
+	.lovetree2{
+		display: none;
+	}
+
+}

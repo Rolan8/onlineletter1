@@ -58,6 +58,11 @@ p{	position: relative;
 	z-index: 1000;
 }
 
+.opac{
+	opacity: 0;
+	transition: 4s;
+}
+
 .lovetree{
 	display: none;
 	position: absolute;
